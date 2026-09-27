@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS spendtrack;
+USE spendtrack;
+
+CREATE TABLE IF NOT EXISTS expenses (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(150) NOT NULL,
+    amount DECIMAL(10,2) NOT NULL,
+    category VARCHAR(50) NOT NULL,
+    expense_date DATE NOT NULL,
+    description VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
